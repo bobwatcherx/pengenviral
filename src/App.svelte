@@ -8,6 +8,7 @@
   import Player from './pages/Player.svelte'
   import Tonton from './pages/Tonton.svelte'
   import Chat from './pages/Chat.svelte'
+  import Cari from './pages/Cari.svelte'
 </script>
 
 
@@ -23,6 +24,7 @@
     <Route path="request" component={Request} />
     <Route path="chat" component={Chat} />
     <Route path="tonton" component={Tonton} />
+    <Route path="cari" component={Cari} />
     <Route path="/player/:id" let:params>
       <Player id={params.id} />
     </Route>
