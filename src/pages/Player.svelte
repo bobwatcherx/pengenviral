@@ -1,6 +1,6 @@
 <script>
     import {Link} from 'svelte-navigator'
-    import { base_api,player_domain,key_api } from '../base/domain.js';
+    import { base_api,player_domain,key_api,tutor_download } from '../base/domain.js';
     import Loadfilm from '../lib/Loadfilm.svelte'
     import { onMount  } from 'svelte';
     import Swal from 'sweetalert2';
@@ -64,6 +64,28 @@
         }
     }
 
+    function opentutor() {
+
+    Swal.fire({
+        title: "Tutor Download BOKEP",
+        html: `
+            <div>
+                <h6 style="color:red">Lu back aja Setiap kebuka web iklan</h6>
+                <iframe src="${tutor_download}"
+                    width="100%"
+                    allowfullscreen
+                />
+            </div>
+        `,
+        showConfirmButton: false,
+        showCloseButton: true,
+        customClass: {
+            content: 'sweetalert-video-content',
+        },
+    });
+}
+
+
 </script>
 
 <div style="margin-top: 10px;">
@@ -85,6 +107,10 @@
 	style="width: 100%;margin-top: 20px;font-weight: bold" 
 	>Download BOKEP disini</a>
 	</div>
+	<div style="margin-top: 10px;" on:click={opentutor}>
+      <button class="btn waves waves-effect purple">Tutor Download BOKEP</button>
+    </div>
+
 	<p style="font-weight: bold;color:red">Lewatin Iklannya kalo Mau DOWNLOAD BOKEP nya</p>
 </div>
 
