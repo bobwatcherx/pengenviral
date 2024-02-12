@@ -105,8 +105,22 @@
 {:else}
 <Loadfilm filmdata={filmdata} />
 <div style="display: flex;justify-content: center;margin-bottom: 30px">
-    <button class="btn waves waves-effect blue"
+    <button class="btn waves waves-effect blue zoom-in-out"
     on:click={tambahbokep}
     >Tambah Bokep BANG</button>
 </div>
 {/if}
+<style>
+     .zoom-in-out {
+    animation: zoomInOut 1.5s infinite alternate;
+  }
+
+  @keyframes zoomInOut {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.5);
+    }
+  }
+</style>

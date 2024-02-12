@@ -27,11 +27,38 @@
 	    showConfirmButton: true
 	  });
 	};
+
+	// CLEAR SEMUA TONTONAN
+	const clearLocalStorage = () => {
+		    try {
+		        localStorage.removeItem('nonton-nanti');
+		        // Perbarui variabel reactive
+		        getSavedMovies();
+		        Swal.fire({
+		            icon: 'success',
+		            title: 'Daftar Film Sudah Di hapus semuanya ',
+		            confirmButtonText: 'ok Bang makasih',
+		            showConfirmButton: true
+		        });
+		    } catch (error) {
+		        console.error('Error clearing localStorage:', error);
+		        Swal.fire({
+		            icon: 'error',
+		            title: 'Oops...',
+		            text: 'Something went wrong while clearing localStorage!',
+		        });
+		    }
+		};
+
+
 </script>
 
 <div style="margin-top: 10px">
-	<div class="container">
+	<div style="display: flex;justify-content: space-between;">
 		<Link to="/" class="btn waves waves-effect pink">kembali</Link>
+		<button
+		on:click={clearLocalStorage}
+		 class="btn waves-effect waves red">Hapus Semua </button>
 	</div>
 
 	<div class="container">
