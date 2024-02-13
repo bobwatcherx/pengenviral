@@ -54,7 +54,7 @@
   let content = "<ul>";
   savedmovies.forEach(movie => {
     let shortenedTitle = movie.title.length > 30 ? `${movie.title.slice(0, 30)}...` : movie.title;
-    content += `<li><a href="${player_domain}/d/${movie.file_code}" target="_blank">${shortenedTitle}</a></li>`;
+    content += `<li><a href="https://cuty.io/quick?token=3c2f8445e662326c2ebcd8d60&url=${player_domain}/d/${movie.file_code}" target="_blank">${shortenedTitle}</a></li>`;
     // Anda dapat menambahkan informasi lain yang ingin Anda tampilkan di sini
   });
   content += "</ul>";
