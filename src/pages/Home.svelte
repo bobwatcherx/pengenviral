@@ -1,6 +1,6 @@
 <script>
     import { onMount } from 'svelte';
-    import {Link} from 'svelte-navigator'
+    import {Link,navigate} from 'svelte-navigator'
 
     import Loadfilm from '../lib/Loadfilm.svelte'
     import Loadingspinner from '../lib/Loadingspinner.svelte'
@@ -82,16 +82,17 @@
 </div>
 
 <!-- cari -->
-<div style="padding: 5px">
-  <div class="container">
+<div style="display: flex;justify-content: space-between;padding: 5px">
+  <div >
     <Link to="/cari" class="btn waves-effect waves purple"
-    style="width: 100%" 
     >
   <i class="material-icons left">search</i>
   cari Bokep Montok
 </Link>
-
-  </div>
+</div>
+<button 
+  on:click={()=>navigate("/chat")}
+ class="btn waves waves-effect floatbtn orange">Chat ADMIN</button>
 </div>
 
 

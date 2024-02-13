@@ -14,9 +14,7 @@
 
 <Router>
 <!-- <Navbarmenu/> -->
-<button 
-  on:click={()=>navigate("/chat")}
- class="btn waves waves-effect floatbtn purple">Obrol Bokep</button>
+
   <div>
     <Route path="/">
       <Home />
