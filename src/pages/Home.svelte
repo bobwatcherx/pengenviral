@@ -81,6 +81,20 @@
     <Link to="/tonton" class="btn waves waves-effect blue">Daftar Tonton Nanti</Link>
 </div>
 
+<!-- cari -->
+<div style="padding: 5px">
+  <div class="container">
+    <Link to="/cari" class="btn waves-effect waves purple"
+    style="width: 100%" 
+    >
+  <i class="material-icons left">search</i>
+  cari Bokep Montok
+</Link>
+
+  </div>
+</div>
+
+
 <div class="card" style="padding:2px">
     <div class="container">
         <h6 style="font-weight: bold">Pilih Genre Bokep</h6>

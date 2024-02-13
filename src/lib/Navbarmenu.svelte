@@ -1,5 +1,4 @@
 <script>
-    import {Link} from 'svelte-navigator'
 	
 </script>
 
@@ -8,6 +7,6 @@ class="z-depth-3"
 >
 	<h5 style="color:white;font-weight: bold;
 	">BINOR NGENTOT</h5>
-	<Link to="/cari" class="btn waves waves-effect white black-text text-bold">Cari Bokep</Link>
+	
 
 </div>
