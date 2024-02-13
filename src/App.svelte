@@ -13,7 +13,7 @@
 
 
 <Router>
-<Navbarmenu/>
+<!-- <Navbarmenu/> -->
 <button 
   on:click={()=>navigate("/chat")}
  class="btn waves waves-effect floatbtn purple">Obrol Bokep</button>
