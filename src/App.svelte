@@ -9,6 +9,9 @@
   import Tonton from './pages/Tonton.svelte'
   import Chat from './pages/Chat.svelte'
   import Cari from './pages/Cari.svelte'
+  import Downloadvideo from './pages/Downloadvideo.svelte'
+  import Exportlink from './pages/Exportlink.svelte'
+
 </script>
 
 
@@ -23,6 +26,8 @@
     <Route path="chat" component={Chat} />
     <Route path="tonton" component={Tonton} />
     <Route path="cari" component={Cari} />
+    <Route path="download" component={Downloadvideo} />
+    <Route path="exportlink" component={Exportlink} />
     <Route path="/player/:id" let:params>
       <Player id={params.id} />
     </Route>

@@ -1,5 +1,5 @@
 <script>
-	import { Link } from 'svelte-navigator';
+	import { Link,navigate } from 'svelte-navigator';
 	import { onMount } from 'svelte';
 	import Swal from 'sweetalert2';
 	import {player_domain} from '../base/domain.js'
@@ -50,30 +50,7 @@
 		    }
 		};
 
-	function downloadsemua() {
-  let content = "<ul>";
-  savedmovies.forEach(movie => {
-    let shortenedTitle = movie.title.length > 30 ? `${movie.title.slice(0, 30)}...` : movie.title;
-    content += `<li><a href="https://cuty.io/quick?token=3c2f8445e662326c2ebcd8d60&url=${player_domain}/d/${movie.file_code}" target="_blank">${shortenedTitle}</a></li>`;
-    // Anda dapat menambahkan informasi lain yang ingin Anda tampilkan di sini
-  });
-  content += "</ul>";
 
-  Swal.fire({
-    title: 'Langsung DOWNLOAD semuanya ',
-    html: content,
-    confirmButtonText: 'OK',
-    showConfirmButton: true,
-    heightAuto: false, // Menetapkan ketinggian tidak otomatis
-    customClass: {
-      popup: 'custom-popup-class' // Menambahkan kelas kustom untuk menyesuaikan lebar
-    },
-    onBeforeOpen: () => {
-      const popup = document.querySelector('.custom-popup-class .swal2-popup');
-      popup.style.maxHeight = '70vh'; // Mengatur tinggi maksimum untuk memicu scrollbar vertikal
-    }
-  });
-}
 
 </script>
 
@@ -81,15 +58,21 @@
 	<div style="display: flex;justify-content: space-between;">
 		<Link to="/" class="btn waves waves-effect pink">kembali</Link>
 		<button
-		on:click={downloadsemua}
+		on:click={()=>navigate("/download")}
 		 class="btn waves-effect waves blue">Download</button>
 		<button
 		on:click={clearLocalStorage}
 		 class="btn waves-effect waves red">Hapus Semua </button>
 	</div>
 
+	<button
+	style="margin-top: 20px"
+		on:click={()=>navigate("/exportlink")}
+		 class="btn waves-effect waves orange">Export / BackUp Semua Link Nonton Nanti</button>
+
 	<div class="container">
 		<h5>Daftar Tonton Nanti Bokep yg lu Simpen</h5>
+		<h6 style="font-weight: bold">Total Bokep Lu simpen : {savedmovies.length}</h6>
 	</div>
 </div>
 
