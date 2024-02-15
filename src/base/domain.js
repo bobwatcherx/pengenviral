@@ -9,6 +9,7 @@ let folder_id = [
 	{"jepang":"797235"},
 	{"indo":"796957"},
 	{"jilbob":"1271244"},
+	{"Barat":"1271250"},
 ]
 
 export  {base_api,player_domain,key_api,folder_id,tutor_download}
