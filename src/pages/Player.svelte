@@ -127,7 +127,16 @@ async function saveBokep() {
 }
 
 
-    
+     function toggleFullscreen() {
+        const iframe = document.getElementById('myIframe');
+        if (!document.fullscreenElement) {
+            iframe.requestFullscreen();
+        } else {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            }
+        }
+    }
 
 </script>
 
@@ -138,10 +147,20 @@ async function saveBokep() {
 	</div>
 
 <div style="margin-top: 10px">
-	<iframe src={player_domain + "/e/" + id} frameborder="0"
+	<iframe id="myIframe" src={player_domain + "/e/" + id} frameborder="0"
 	width="100%" height="330px" allowfullscreen="true"
 	scrolling="no"
 	></iframe>
+    <br>
+    <!-- FULLSCREEN -->
+    <div style="display: flex;justify-content: end;margin-bottom: 10px;">
+        <button class="btn waves waves-effect  orange"
+        style="font-weight: bold" 
+    on:click={toggleFullscreen}
+    >Nonton Full screen</button>
+
+    </div>
+
 	<!-- DOWNLOAD -->
 	<div style="display: flex;justify-content: space-around;">
 		<button class="btn waves waves-effect blue"
