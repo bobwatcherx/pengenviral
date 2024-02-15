@@ -107,7 +107,7 @@
                     <label>
                         <input name="group1" type="radio" value={value} bind:group={selectedFolder} on:change={handleRadioChange}  
                         />
-                        <span>{label}</span>
+                        <span style="font-weight: bold;color:#ad0e58">{label}</span>
                     </label>
                 {/each}
             {/each}
@@ -126,6 +126,8 @@
 </div>
 {/if}
 <style>
+
+
      .zoom-in-out {
     animation: zoomInOut 1.5s infinite alternate;
   }
