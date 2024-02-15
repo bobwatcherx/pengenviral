@@ -83,6 +83,7 @@
 </div>
 
 <div class="container">
+<p style="color:red;font-weight: bold">Lu Paste Di catatan Lu atau Di mana aja bebas abis lu klik tombol Copy di pojok kanan atas</p>
 <h6 style="font-weight: bold">Total Bokep Lu Simpen: {savedmovies.length}</h6>
 </div>
 <ul class="listview z-depth-2">
