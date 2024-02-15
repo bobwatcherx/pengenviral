@@ -24,25 +24,41 @@
         "https://binorentot.netlify.app"
     ];
 
-    function copyAllLinks() {
-        let textToCopy = '';
+  function copyAllLinks() {
+    let textToCopy = '';
 
-        savedmovies.forEach(movie => {
-            const title = movie.title;
-            const link = `${selectedDomain}/player/${movie.file_code}`;
-            textToCopy += `${title}\n${link}\n\n`;
-        });
+    savedmovies.forEach(movie => {
+        const title = movie.title;
+        const link = `${selectedDomain}/player/${movie.file_code}`;
+        textToCopy += `${title}\n${link}\n\n`;
+    });
 
-        navigator.clipboard.writeText(textToCopy).then(() => {
-            Swal.fire({
-                icon: 'success',
-                title: 'Berhasil',
-                text: 'Semua link telah disalin ke clipboard!'
-            });
-        }).catch(err => {
-            console.error('Gagal menyalin link: ', err);
-        });
-    }
+    // Create a textarea element
+    const textArea = document.createElement("textarea");
+
+    // Set the value of the textarea to the text you want to copy
+    textArea.value = textToCopy;
+
+    // Append the textarea to the DOM
+    document.body.appendChild(textArea);
+
+    // Select the text in the textarea
+    textArea.select();
+
+    // Copy the selected text to the clipboard
+    document.execCommand("copy");
+
+    // Remove the textarea from the DOM
+    document.body.removeChild(textArea);
+
+    // Show success message
+    Swal.fire({
+        icon: 'success',
+        title: 'Berhasil',
+        text: 'Semua link telah disalin ke clipboard!'
+    });
+}
+
 </script>
 
 <div style="display: flex;justify-content: space-around;margin-top: 30px">
