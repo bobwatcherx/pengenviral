@@ -85,6 +85,49 @@
     });
 }
 
+// SIMPAN BOKEP PLAYER
+async function saveBokep() {
+    try {
+        const response = await fetch(`${base_api}/file/info?key=${key_api}&file_code=${id}`);
+        if (!response.ok) {
+            throw new Error('Gagal menyimpan bokep');
+        }
+        const data = await response.json();
+        // Ubah struktur data sesuai dengan yang diharapkan saat menyimpan ke localStorage
+        const result = {
+            canplay: data.result[0].canplay,
+            download_url: data.result[0].protected_dl,
+            file_code: data.result[0].filecode, 
+            fld_id: data.result[0].fld_id,
+            length: data.result[0].length,
+            single_img: data.result[0].single_img,
+            splash_img: data.result[0].splash_img,
+            title: data.result[0].title,
+            uploaded: data.result[0].uploaded,
+            views: data.result[0].views
+        };
+        saveToLocalStorage(result);
+
+        Swal.fire({
+            title: 'Bokep berhasil Disimpan',
+            text: 'Disimpan Di Nonton nanti',
+            icon: 'success',
+            showConfirmButton: false,
+            timer: 2000
+        });
+    } catch (error) {
+        console.error('Error menyimpan bokep:', error.message);
+        Swal.fire({
+            title: 'Gagal Menyimpan Bokep',
+            text: 'Terjadi kesalahan saat menyimpan bokep.',
+            icon: 'error',
+            showConfirmButton: true
+        });
+    }
+}
+
+
+    
 
 </script>
 
@@ -100,12 +143,16 @@
 	scrolling="no"
 	></iframe>
 	<!-- DOWNLOAD -->
-	<div class="container">
-		<a href={`https://cuty.io/quick?token=3c2f8445e662326c2ebcd8d60&url=${player_domain}/d/${id}`} 
+	<div style="display: flex;justify-content: space-around;">
+		<button class="btn waves waves-effect blue"
+        on:click={saveBokep}
+        >Simpan Bokep</button>
+        <a href={`https://cuty.io/quick?token=3c2f8445e662326c2ebcd8d60&url=${player_domain}/d/${id}`} 
 	target="_blank"
 	class="btn waves waves-effect pink"
-	style="width: 100%;margin-top: 20px;font-weight: bold" 
-	>Download BOKEP disini</a>
+	style="font-weight: bold" 
+	>Download  Bokep</a>
+     
 	</div>
 	<div style="margin-top: 10px;" on:click={opentutor}>
       <button class="btn waves waves-effect purple">Tutor Download BOKEP</button>
