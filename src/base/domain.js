@@ -12,6 +12,7 @@ let folder_id = [
 	{"Barat":"1271250"},
 	{"Bumil":"1271273"},
 	{"Colmek":"1271316"},
+	{"treesom":"1272585"},
 ]
 
 export  {base_api,player_domain,key_api,folder_id,tutor_download}
