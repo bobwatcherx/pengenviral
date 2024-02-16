@@ -65,10 +65,12 @@
 		 class="btn waves-effect waves red">Hapus Semua </button>
 	</div>
 
-	<button
+	<div class="container">
+		<button
 	style="margin-top: 20px"
 		on:click={()=>navigate("/exportlink")}
-		 class="btn waves-effect waves orange">Export / BackUp Semua Link Nonton Nanti</button>
+		 class="btn waves-effect waves green">BackUp Semua Link Nonton Nanti</button>
+	</div>
 
 	<div class="container">
 		<h5>Daftar Tonton Nanti Bokep yg lu Simpen</h5>

@@ -16,7 +16,7 @@
 </script>
 
 <div class="container" style="margin-top: 40px">
-    <Link to="/" class="btn waves waves-effect pink">Kembali</Link>
+    <Link to="/tonton" class="btn waves waves-effect pink">Kembali</Link>
     <h5>Langsung download Semua Bokep dari nonton nanti</h5>
     <p style="color: red;font-weight: bold">
         Lewatin iklan nya kalo kebuka iklan lu lewatin nanti masuk ke web download nya

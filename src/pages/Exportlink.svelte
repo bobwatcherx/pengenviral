@@ -62,7 +62,7 @@
 </script>
 
 <div style="display: flex;justify-content: space-around;margin-top: 30px">
-    <Link to="/" class="btn waves waves-effect pink">Kembali</Link>
+    <Link to="/tonton" class="btn waves waves-effect pink">Kembali</Link>
     <button class="btn waves waves-effect purple" on:click={copyAllLinks}>Copy Semua Link</button>
 </div>
 
