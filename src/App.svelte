@@ -56,7 +56,7 @@
     position: fixed;
     z-index: 3;
     left: 3px;
-    bottom: 7px;
+    bottom: 107px;
     border-radius: 30px;
     width:140px;
     height: 50px;
