@@ -10,6 +10,7 @@
     let filmdata = [];
 	export let id;
 
+    
 	async function fetchdata() {
         try {
             const getfirst = await fetch(`${base_api}/file/list?key=${key_api}&page=1&per_page=66`);
@@ -157,8 +158,11 @@ async function saveBokep() {
 	>Download  Bokep</a>
      
 	</div>
-	<div style="margin-top: 10px;" on:click={opentutor}>
-      <button class="btn waves waves-effect purple">Tutor Download BOKEP</button>
+	<div style="margin-top: 10px;" >
+      <button class="btn waves waves-effect purple" 
+      on:click={opentutor}
+      >Tutor Download BOKEP</button>
+      
     </div>
 
 	<p style="font-weight: bold;color:red">Lewatin Iklannya kalo Mau DOWNLOAD BOKEP nya</p>
@@ -181,9 +185,9 @@ async function saveBokep() {
 		            </div>
 		            <div class="container">
 		                {#if d.title.length > 40}
-		                    <span style="font-weight: bold;color:#a10b74">{d.title.slice(0, 40)}...</span>
+		                    <span style="font-weight: bold;">{d.title.slice(0, 40)}...</span>
 		                {:else}
-		                    <span style="font-weight: bold;color:#a10b74">{d.title}</span>
+		                    <span style="font-weight: bold;">{d.title}</span>
 		                {/if}
 		                <br>
 		                <span style="font-weight: bold">{formatDate(d.uploaded)}</span>
@@ -211,5 +215,9 @@ async function saveBokep() {
     .row .col{
         padding: 0px;
         margin: 0px
+    }
+     .card{
+        background:var(--bg-color);
+        color: var(--text-color);
     }
 </style>

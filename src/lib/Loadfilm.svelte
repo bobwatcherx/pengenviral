@@ -35,6 +35,13 @@
         padding: 0px;
         margin: 0px
     }
+    .card{
+        background:var(--bg-color);
+        color: var(--text-color);
+    }
+    .titletxt{
+        color: var(--text-color);
+    }
 </style>
 
 
@@ -48,9 +55,14 @@
             </div>
             <div class="container">
                 {#if d.title.length > 40}
-                    <span style="font-weight: bold;color:#a10b74">{d.title.slice(0, 40)}...</span>
+                    <span 
+                    class="titletxt" 
+                    style="font-weight: bold;">{d.title.slice(0, 40)}...</span>
                 {:else}
-                    <span style="font-weight: bold;color:#a10b74">{d.title}</span>
+                    <span 
+                    class="titletxt" 
+
+                    style="font-weight: bold;">{d.title}</span>
                 {/if}
                 <br>
                 <span style="font-weight: bold">{formatDate(d.uploaded)}</span>

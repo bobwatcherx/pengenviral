@@ -72,7 +72,7 @@ function saveToLocalStorage(film) {
 <div class="container">
 	<h5>Lu Masukin bokep yg lu mau cari bisa kode jepang atau artis bokep</h5>
 </div>
-<div class="card z-depth-3" style="margin-bottom: 20px">
+<div class="z-depth-3" style="margin-bottom: 20px;background-color: white">
 	<div class="container">
 		<p style="font-weight: bold">masukin bokep yg mau lu Cari</p>
 		<input type="text" bind:value={caribokep} placeholder="masukin kata kata bokep">
@@ -97,9 +97,9 @@ function saveToLocalStorage(film) {
             </div>
             <div class="container">
                 {#if d.title.length > 40}
-                    <span style="font-weight: bold;color:#a10b74">{d.title.slice(0, 40)}...</span>
+                    <span style="font-weight: bold;">{d.title.slice(0, 40)}...</span>
                 {:else}
-                    <span style="font-weight: bold;color:#a10b74">{d.title}</span>
+                    <span style="font-weight: bold;">{d.title}</span>
                 {/if}
                 <br>
                 <span style="font-weight: bold">{formatDate(d.uploaded)}</span>
@@ -116,6 +116,16 @@ function saveToLocalStorage(film) {
 </div>
 {/if}
 <style>
+   .card{
+        background:var(--bg-color);
+        color: var(--text-color);
+    }
+    .row .col{
+      padding: 0px;
+      margin:0px;
+    }
+
+
      .zoom-in-out {
     animation: zoomInOut 1.5s infinite alternate;
   }

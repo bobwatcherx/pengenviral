@@ -18,7 +18,10 @@
 
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-   
+
+  <!-- TRANSLATE    -->
+   <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
   </head>
   <body>
     <div id="app"></div>
@@ -32,6 +35,13 @@
 
     
     </div>
-    
+    <script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'de,en' // remove this line if you want to include all languages
+  },'app');
+}
+</script>
   </body>
 </html>
