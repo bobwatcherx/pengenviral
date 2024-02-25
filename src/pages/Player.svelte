@@ -1,6 +1,6 @@
 <script>
     import {Link} from 'svelte-navigator'
-    import { base_api,player_domain,key_api,tutor_download } from '../base/domain.js';
+    import { base_api,directlink_url,player_domain,key_api,tutor_download } from '../base/domain.js';
     import Loadfilm from '../lib/Loadfilm.svelte'
     import { onMount  } from 'svelte';
     import Swal from 'sweetalert2';
@@ -8,10 +8,25 @@
     
     let loading = true
     let filmdata = [];
+    let detaildata = [];
+    let showgambar_direct = true
 	export let id;
 
-    
-	async function fetchdata() {
+    async function fetchdetail(){
+        try{
+            const getinfo = await fetch(`${base_api}/file/info?key=${key_api}&file_code=${id}`)
+            let info = await getinfo.json()
+            detaildata = info.result
+        }
+        catch (error) {
+            console.error("Error fetching data:", error.message);
+        } finally{
+            loading = false
+        }
+    }
+
+    // RELATED
+	async function fetchrelated() {
         try {
             const getfirst = await fetch(`${base_api}/file/list?key=${key_api}&page=1&per_page=66`);
             let getdata = await getfirst.json()
@@ -32,12 +47,17 @@
         }
     }
 
-    onMount(fetchdata);
+    onMount(()=>{
+        fetchdetail()
+        fetchrelated()
+    });
 
     function changepage(code){
     	id = code
     	loading= true
-    	fetchdata()
+        showgambar_direct = true
+        fetchdetail()
+    	fetchrelated()
     }
    	function formatDate(dateString) {
 		const options = { year: 'numeric', month: 'long', day: 'numeric' };
@@ -127,7 +147,11 @@ async function saveBokep() {
     }
 }
 
-
+// OPEN DIRECT Link
+function open_directlink(){
+    window.open(directlink_url,"_blank")
+    showgambar_direct = false
+}
     
 
 </script>
@@ -139,11 +163,39 @@ async function saveBokep() {
 	</div>
 
 <div style="margin-top: 10px">
-	<iframe id="myIframe" src={player_domain + "/e/" + id} frameborder="0"
-	width="100%" height="330px" allowfullscreen="true"
-	scrolling="no"
-	></iframe>
-    <br>
+    {#if detaildata != ""}
+    {#each detaildata as detail}
+        {#if showgambar_direct == true}
+            <div class="z-depth-5" on:click={open_directlink}>
+                    <div class="position-relative" >
+                        <img src={detail.single_img} id="imgcover" alt="" style="width: 100%; height: 100%;">
+                        <div class="overlay" id="overlay">
+                            <div class="play-button-container">
+                                <span class="play-button-background"></span>
+                                <span class="play-button">▶</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                <p style="text-align: center;font-weight: bold">Klik Untuk Memulai Video</p>
+            </div>
+
+        {:else}
+            <iframe src={`${player_domain}/e/${detail.filecode}`}
+              width="100%" height="330px" allowfullscreen allowscrolling="no" 
+             frameborder="0"></iframe>
+         {/if}
+         <br>
+         <div class="container">
+             <span style="font-weight: bold;color: purple">{detail.title}</span>
+         </div>
+         <br>
+    {/each}
+    {:else}
+    <div class="container">
+        <span style="margin-top:30px;margin-bottom:30px;font-weight: bold">Sedang Mencari Bokep ...</span>
+    </div>
+    {/if}
     
 
 	<!-- DOWNLOAD -->
@@ -220,4 +272,46 @@ async function saveBokep() {
         background:var(--bg-color);
         color: var(--text-color);
     }
+.position-relative {
+    position: relative;
+}
+
+.play-button-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.play-button-background {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    background-color: white;
+    border-radius: 50%;
+    position: relative;
+    animation: zoomInOut 0.5s infinite alternate; 
+}
+
+.play-button {
+    font-size: 54px;
+    color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+
+
 </style>
