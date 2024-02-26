@@ -4,7 +4,7 @@ let base_api = "https://oakdoodserver.deno.dev"
 let key_api = "219725bbkborbourrp2cd4"
 let player_domain = "https://d0000d.com"
 let tutor_download = "https://cdn.videy.co/RnUQ8MLp.mp4"
-let directlink_url = "https://glitteringpace.com/bM3.V/0aPG3ZpYvDbImMVcJEZZDd0-1/MQjPEq4/M/zeQS4YLHTrUHyqMFT-ghzGNUDikk"
+let directlink_url = "https://nowhaphopi.com/bs3.V-0/PW3bpEvWbcmOVMJ/ZADQ0/1fM/j/I/zuOmD/Ab2/L/TNUNyNMHjVMx4CMdDtcL"
 let folder_id = [
 	{"semua":""},
 	{"jepang":"797235"},
