@@ -19,4 +19,4 @@ let folder_id = [
 	{"Hentai":"1274090"},
 ]
 
-export  {base_api,directlink_url,player_domain,key_api,folder_id,tutor_download}
+export  {base_api,directlink_url,base_netlify_domain,player_domain,key_api,folder_id,tutor_download}
