@@ -2,7 +2,7 @@
 // LIST RANDOM FILE
 const { key_api, base_api } = require("../../src/base/domain.js");
 
-exports.handler = async (event) => {
+export async function handler(event, context) {
     let statusCode, data;
     const { fld_id,page,per_page } = event.queryStringParameters;
     console.log("fld_id:", fld_id,page,per_page);
