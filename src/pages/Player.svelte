@@ -1,6 +1,13 @@
 <script>
     import {Link} from 'svelte-navigator'
-    import { directlink_url,base_netlify_domain,player_domain,tutor_download } from '../base/domain.js';
+    import { 
+        directlink_url,
+        base_netlify_domain,
+        player_domain,
+        tutor_download,
+        shortlink_ygpunya,
+        punya_gw
+         } from '../base/domain.js';
     import Loadfilm from '../lib/Loadfilm.svelte'
     import { onMount  } from 'svelte';
     import Swal from 'sweetalert2';
@@ -151,6 +158,23 @@ function open_directlink(){
     showgambar_direct = false
 }
     
+    // shortlink
+    function downloadbtn() {
+    // punya GW
+    let key_fake = punya_gw;
+    // PUNYA ORANG
+    let key_ygpunya = shortlink_ygpunya;
+    let key;
+    let pilihan = [1, 2, 3,4];
+    // Memilih secara acak angka dari array pilihan
+    key = pilihan[Math.floor(Math.random() * pilihan.length)];
+
+    let token = (key === 1) ? key_ygpunya : key_fake;
+
+    let url = `https://cuty.io/quick?token=${token}&url=${player_domain}/d/${id}`;
+    window.open(url, '_blank');
+    
+    }
 
 </script>
 <div style="margin-top: 10px;">
@@ -200,12 +224,9 @@ function open_directlink(){
 		<button class="btn waves waves-effect blue"
         on:click={saveBokep}
         >Simpan Bokep</button>
-        <a href={`https://cuty.io/quick?token=3c2f8445e662326c2ebcd8d60&url=${player_domain}/d/${id}`} 
-	target="_blank"
-	class="btn waves waves-effect pink"
-	style="font-weight: bold" 
-	>Download  Bokep</a>
-     
+        <button class="btn waves waves-effect pink"
+        on:click={downloadbtn}
+        >Download</button>
 	</div>
 	<div style="margin-top: 10px;" >
       <button class="btn waves waves-effect purple" 

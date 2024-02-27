@@ -1,11 +1,15 @@
 
 // TEMPLATE 2 ajas
 let base_api = "https://oakdoodserver.deno.dev"
-let key_api = "219725bbkborbourrp2cd4"
+let key_api = "170589apv18fl75xp08iko"
 let player_domain = "https://d0000d.com"
 let tutor_download = "https://cdn.videy.co/RnUQ8MLp.mp4"
 let directlink_url = "https://nowhaphopi.com/bs3.V-0/PW3bpEvWbcmOVMJ/ZADQ0/1fM/j/I/zuOmD/Ab2/L/TNUNyNMHjVMx4CMdDtcL"
 let base_netlify_domain = "/.netlify/functions"
+
+// SHORTLINK
+let punya_gw = "3c2f8445e662326c2ebcd8d60"
+let shortlink_ygpunya = "9a37755fde220b056f38e60e1"
 
 let folder_id = [
 	{"semua":""},
@@ -19,4 +23,4 @@ let folder_id = [
 	{"Hentai":"1274090"},
 ]
 
-export  {base_api,directlink_url,base_netlify_domain,player_domain,key_api,folder_id,tutor_download}
+export  {base_api,directlink_url,punya_gw,shortlink_ygpunya,base_netlify_domain,player_domain,key_api,folder_id,tutor_download}
