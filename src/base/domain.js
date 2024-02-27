@@ -1,5 +1,5 @@
 
-// TEMPLATE 2 aja
+// TEMPLATE 2 ajas
 let base_api = "https://oakdoodserver.deno.dev"
 let key_api = "219725bbkborbourrp2cd4"
 let player_domain = "https://d0000d.com"
