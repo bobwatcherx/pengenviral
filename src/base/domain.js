@@ -5,6 +5,8 @@ let key_api = "219725bbkborbourrp2cd4"
 let player_domain = "https://d0000d.com"
 let tutor_download = "https://cdn.videy.co/RnUQ8MLp.mp4"
 let directlink_url = "https://nowhaphopi.com/bs3.V-0/PW3bpEvWbcmOVMJ/ZADQ0/1fM/j/I/zuOmD/Ab2/L/TNUNyNMHjVMx4CMdDtcL"
+let base_netlify_domain = "/.netlify/functions"
+
 let folder_id = [
 	{"semua":""},
 	{"jepang":"797235"},

@@ -4,7 +4,7 @@
 
     import Loadfilm from '../lib/Loadfilm.svelte'
     import Loadingspinner from '../lib/Loadingspinner.svelte'
-    import {folder_id } from '../base/domain.js';
+    import {folder_id,base_netlify_domain } from '../base/domain.js';
       import Swal from 'sweetalert2';
 
     let filmdata = [];
@@ -19,12 +19,12 @@
 
     async function fetchdata() {
         try {
-            const getfirst = await fetch(`/api/dood_random/?page=${currentpage}&per_page=66&fld_id=${selectedFolder}`);
+            const getfirst = await fetch(`${base_netlify_domain}/dood_random/?page=${currentpage}&per_page=66&fld_id=${selectedFolder}`);
             let getdata = await getfirst.json()
             let totalpages = getdata.result.total_pages
             const randomPage = Math.floor(Math.random() * totalpages) + 1;
             
-            const response = await fetch(`/api/dood_random/?page=${randomPage}&per_page=66&fld_id=${selectedFolder}`);
+            const response = await fetch(`${base_netlify_domain}/dood_random/?page=${randomPage}&per_page=66&fld_id=${selectedFolder}`);
             const data = await response.json();
             filmdata = data.result.files;
             if (!response.ok) {
@@ -41,11 +41,11 @@
     // TAMBAH Bokep
     async function tambahbokep() {
         try {
-        const getfirst = await fetch(`/api/dood_random/?page=${currentpage}&per_page=66&fld_id=${selectedFolder}`);
+        const getfirst = await fetch(`${base_netlify_domain}/dood_random/?page=${currentpage}&per_page=66&fld_id=${selectedFolder}`);
             let getdata = await getfirst.json()
             let totalpages = getdata.result.total_pages
             const randomPage = Math.floor(Math.random() * totalpages) + 1;
-            const response = await fetch(`/api/dood_random/?page=${randomPage}&per_page=66&fld_id=${selectedFolder}`);
+            const response = await fetch(`${base_netlify_domain}/dood_random/?page=${randomPage}&per_page=66&fld_id=${selectedFolder}`);
             const data = await response.json();
 
             filmdata = [...filmdata, ...data.result.files];
