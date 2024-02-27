@@ -22,7 +22,7 @@
 
 
 <Router>
-<!-- <Navbarmenu/> -->
+<Navbarmenu/>
 
   <div>
 
