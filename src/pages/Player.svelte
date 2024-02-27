@@ -1,6 +1,6 @@
 <script>
     import {Link} from 'svelte-navigator'
-    import { directlink_url,player_domain,tutor_download } from '../base/domain.js';
+    import { directlink_url,base_netlify_domain,player_domain,tutor_download } from '../base/domain.js';
     import Loadfilm from '../lib/Loadfilm.svelte'
     import { onMount  } from 'svelte';
     import Swal from 'sweetalert2';
@@ -14,7 +14,7 @@
 
     async function fetchdetail(){
         try{
-            const getinfo = await fetch(`/api/dood_info?file_code=${id}`)
+            const getinfo = await fetch(`${base_netlify_domain}/dood_info?file_code=${id}`)
             let info = await getinfo.json()
             detaildata = info.result
         }
@@ -26,12 +26,12 @@
     // RELATED
 	async function fetchrelated() {
         try {
-            const getfirst = await fetch(`/api/dood_random/?page=1&per_page=66`);
+            const getfirst = await fetch(`${base_netlify_domain}/dood_random/?page=1&per_page=66`);
             let getdata = await getfirst.json()
             let totalpages = getdata.result.total_pages
             const randomPage = Math.floor(Math.random() * totalpages) + 1;
             
-            const response = await fetch(`/api/dood_random/?page=${randomPage}&per_page=66`);
+            const response = await fetch(`${base_netlify_domain}/dood_random/?page=${randomPage}&per_page=66`);
             const data = await response.json();
             filmdata = data.result.files;
             if (!response.ok) {
@@ -107,7 +107,7 @@
 // SIMPAN BOKEP PLAYER
 async function saveBokep() {
     try {
-        const response = await fetch(`/api/dood_info/?file_code=${id}`);
+        const response = await fetch(`${base_netlify_domain}/dood_info/?file_code=${id}`);
         if (!response.ok) {
             throw new Error('Gagal menyimpan bokep');
         }
