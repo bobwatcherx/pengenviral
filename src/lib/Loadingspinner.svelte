@@ -12,3 +12,4 @@
   </div>
 </div>
 <h5 style="font-weight: bold;text-align: center">Mencari Bokep TERMONTOK</h5>
+<p style="text-align: center">Jika Kelamaan refresh atau close buka lagi</p>
