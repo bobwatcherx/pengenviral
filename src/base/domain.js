@@ -4,7 +4,7 @@ let base_api = "https://oakdoodserver.deno.dev"
 let key_api = "170589apv18fl75xp08iko"
 let player_domain = "https://d0000d.com"
 let tutor_download = "https://cdn.videy.co/RnUQ8MLp.mp4"
-let directlink_url = "https://nowhaphopi.com/bs3.V-0/PW3bpEvWbcmOVMJ/ZADQ0/1fM/j/I/zuOmD/Ab2/L/TNUNyNMHjVMx4CMdDtcL"
+let directlink_url = "https://www.profitablegatecpm.com/p8rz845qz?key=161ef104616e7192fa06ead0196ff7b4"
 let base_netlify_domain = "/.netlify/functions"
 
 // SHORTLINK
