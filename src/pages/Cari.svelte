@@ -2,7 +2,7 @@
     import {Link} from 'svelte-navigator'
     import Loadingspinner from '../lib/Loadingspinner.svelte'
     import Swal from 'sweetalert2';
-   	
+   	import {base_netlify_domain} from '../base/domain.js'
    	  let filmdata = [];
     let currentpage = 1;
     let loading = false
@@ -18,7 +18,7 @@ function formatDate(dateString) {
      loading = true
 
         try {
-            const response = await fetch(`/api/dood_cari/?search_term=${caribokep}`);
+            const response = await fetch(`${base_netlify_domain}/dood_cari/?search_term=${caribokep}`);
             const data = await response.json();
             filmdata = data.result;
             if (!response.ok) {
