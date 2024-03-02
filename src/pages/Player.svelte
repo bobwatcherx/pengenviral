@@ -171,7 +171,7 @@ function open_directlink(){
 
     let token = (key === 1) ? key_ygpunya : key_fake;
 
-    let url = `https://ezshort.in/st?api=${token}&url=${player_domain}/d/${id}`;
+    let url = `https://ez4short.com/st?api=${token}&url=${player_domain}/d/${id}`;
     window.open(url, '_blank');
     
     }
