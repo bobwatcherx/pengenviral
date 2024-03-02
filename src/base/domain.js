@@ -9,7 +9,7 @@ let base_netlify_domain = "/.netlify/functions"
 
 // SHORTLINK
 let punya_gw = "c244258bb3df41c865fbe92e241e0699821517dd"
-let shortlink_ygpunya = "415b79537e1b633de08ee4157cf70ed83b03c279"
+let shortlink_ygpunya = "c244258bb3df41c865fbe92e241e0699821517dd"
 
 let folder_id = [
 	{"semua":""},
