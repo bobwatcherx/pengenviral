@@ -8,8 +8,8 @@ let directlink_url = "https://www.profitablegatecpm.com/p8rz845qz?key=161ef10461
 let base_netlify_domain = "/.netlify/functions"
 
 // SHORTLINK
-let punya_gw = "c244258bb3df41c865fbe92e241e0699821517dd"
-let shortlink_ygpunya = "c244258bb3df41c865fbe92e241e0699821517dd"
+let punya_gw = "abf057495e43742d4f89641a7d16b39eb0348083"
+let shortlink_ygpunya = "415b79537e1b633de08ee4157cf70ed83b03c279"
 
 let folder_id = [
 	{"semua":""},
