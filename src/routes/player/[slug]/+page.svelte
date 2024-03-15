@@ -101,6 +101,13 @@ function open_directlink(){
    class="btn waves waves-effect blue"
 	>Bokep tersimpan</a>
 </div>
+
+<div class="container" style="margin-top: 10px">
+    <a href="/card_cari"
+    style="width: 100%" 
+   class="btn waves waves-effect purple"
+    >Cari Bokep</a>
+</div>
 {#each data.file_info.result as d}
 	{#if directshow == true}
 		 <div class="z-depth-5"

@@ -22,6 +22,12 @@
   >Chat ADMIN</a>
   
 </div>
+<!-- cari -->
+<div style="display: flex;justify-content: end;margin-top: 10px">
+  <a href="/card_cari"
+   class="btn waves waves-effect purple" 
+  >Cari Bokep</a>
+</div>
  <!-- GENRE -->
        <div class="card">
         <div class="container">
