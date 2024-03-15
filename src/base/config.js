@@ -6,7 +6,6 @@ export let directlink_url = "https://cruel-theme.com/b/3cV/0.PH3/p_vabDm-VuJjZ/D
 export let shortlink_token  = "3c2f8445e662326c2ebcd8d60"
 
 export let folder_id = [
-	{"semua":""},
 	{"jepang":"797235"},
 	{"indo":"796957"},
 	{"jilbob":"1271244"},
