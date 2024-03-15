@@ -117,6 +117,8 @@ function open_directlink(){
             </div>
 	{:else}
 		<iframe src={player_domain + "/" + d.protected_embed} frameborder="0"
+        allowfullscreen="true"
+        allowscrolling="false"
 		style="width: 100%;height: 330px;margin-top: 10px" 
 		></iframe>
 	{/if}
