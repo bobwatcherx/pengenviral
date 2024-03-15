@@ -94,6 +94,9 @@ function open_directlink(){
 	<a href="/"
    class="btn waves waves-effect pink"
 	>kembali</a>
+    <a href="/chat"
+   class="btn waves waves-effect green"
+    >Chat ADMIN </a>
 	<a href="/nontonnanti"
    class="btn waves waves-effect blue"
 	>Bokep tersimpan</a>

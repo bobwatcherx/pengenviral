@@ -34,7 +34,7 @@
 </div>
 
 <div class="row">
-  {#each data.nontonNantiData.reverse() as file}
+  {#each data.nontonNantiData as file}
     <div class="col s6 m3 l3">
       <div class="card">
         <div class="card-image">
