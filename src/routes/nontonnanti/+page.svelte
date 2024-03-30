@@ -45,8 +45,8 @@
           <p>{file.uploaded}</p>
         </div>
         <div style="display: flex;justify-content: space-around;">
-          <button class="btn waves waves-effect blue" on:click={() => hapus(file)}>Hapus</button>
-          <a class="btn waves waves-effect pink" href={"/player/" + file.file_code}>Nonton</a>
+          <button class="btn waves waves-effect red" on:click={() => hapus(file)}>Hapus</button>
+          <a class="btn waves waves-effect blue" href={"/player/" + file.file_code}>Nonton</a>
         </div>
       </div>
     </div>

@@ -1,3 +1,4 @@
+
 <script>
   export let data;
   import Loaddata from '../components/Loaddata.svelte'
@@ -49,4 +50,5 @@
   <h5>Semua Bokep Montok Terbaru</h5>
 </div>
 <Loaddata data={data}/>
+
 </div>

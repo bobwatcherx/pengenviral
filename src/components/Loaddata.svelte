@@ -1,3 +1,4 @@
+
 <script>
   import { simpanbokep } from '../myfunction/index.js';
   
@@ -33,7 +34,7 @@ function formatDate(dateString) {
   <div class="row">
     {#each data.item.result.files as file}
       <div class="col s6 m3 l3">
-        <div class="card waves waves-effect">
+        <div class="card waves waves-effect z-depth-5">
           <div class="card-image">
             <img src="{file.single_img}" alt="{file.title}">
           </div>

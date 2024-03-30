@@ -94,20 +94,23 @@ function open_directlink(){
 	<a href="/"
    class="btn waves waves-effect pink"
 	>kembali</a>
-    <a href="/chat"
-   class="btn waves waves-effect green"
-    >Chat ADMIN </a>
+    
 	<a href="/nontonnanti"
    class="btn waves waves-effect blue"
 	>Bokep tersimpan</a>
 </div>
 
-<div class="container" style="margin-top: 10px">
+<div style="margin-top: 10px;display: flex;justify-content: space-between;">
     <a href="/card_cari"
     style="width: 100%" 
    class="btn waves waves-effect purple"
-    >Cari Bokep</a>
+    >Cari Bokep Montok</a>
+   
+     <a href="/chat"
+   class="btn waves waves-effect orange"
+    >Chat ADMIN </a>
 </div>
+
 {#each data.file_info.result as d}
 	{#if directshow == true}
 		 <div class="z-depth-5"
