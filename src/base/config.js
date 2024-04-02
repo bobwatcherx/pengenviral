@@ -5,6 +5,8 @@ export let tutor_download = "https://cdn.videy.co/RnUQ8MLp.mp4"
 export let directlink_url = "https://flowerystation.com/b/3nVn0.P/3/pfvgbym/V/JSZFDL0q1yM/jiIVzcOWDyAK2pL/TPUoyOMnjjM/4fMiD-cx"
 export let shortlink_token  = "3c2f8445e662326c2ebcd8d60"
 
+
+
 export let folder_id = [
 	{"jepang":"797235"},
 	{"indo":"796957"},
