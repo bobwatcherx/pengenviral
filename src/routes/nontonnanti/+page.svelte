@@ -1,5 +1,6 @@
 <script>
  import Swal from 'sweetalert2';
+  import {gotoplayer} from '../../lib'
   export let data;
 
   function hapus(file) {
@@ -46,7 +47,9 @@
         </div>
         <div style="display: flex;justify-content: space-around;">
           <button class="btn waves waves-effect red" on:click={() => hapus(file)}>Hapus</button>
-          <a class="btn waves waves-effect blue" href={"/player/" + file.file_code}>Nonton</a>
+          <button class="btn waves waves-effect blue" 
+          on:click={()=>gotoplayer(file)}
+          >Nonton</button>
         </div>
       </div>
     </div>

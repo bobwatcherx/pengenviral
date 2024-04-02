@@ -2,7 +2,6 @@ import {dood_domain,apikey} from '../../../base/config.js'
 
 export async function load({params}){
 	let slugid = params.slug
-	console.log(slugid)
 	const response = await fetch(`${dood_domain}/file/info?key=${apikey}&file_code=${params.slug}`);
     const file_info = await response.json();
 

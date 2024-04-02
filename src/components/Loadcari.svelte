@@ -1,6 +1,7 @@
 <script>
   import { simpanbokep } from '../myfunction/index.js';
-  
+  import {gotoplayer} from '../lib'
+
 	 let loading = true; 
 	export let data;  
   $: {
@@ -46,10 +47,11 @@ function formatDate(dateString) {
               class="btn waves waves-effect blue"
               on:click={() => simpanbokep(file)}
             >Simpan</button>
-            <a
+            <button
+            on:click={()=>gotoplayer(file)}
+
               class="btn waves waves-effect pink"
-              href={"/player/" + file.file_code}
-            >Nonton</a>
+            >Nonton</button>
           </div>
         </div>
       </div>

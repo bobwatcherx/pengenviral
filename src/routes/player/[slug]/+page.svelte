@@ -6,7 +6,9 @@
 		shortlink_token
 	} from '../../../base/config.js'
   import Loaddata from '../../../components/Loaddata.svelte'
-	 import Swal from 'sweetalert2';
+import Swal from 'sweetalert2';
+
+
 	export let data
 
 	let directshow = true

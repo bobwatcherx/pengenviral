@@ -1,8 +1,7 @@
 
 <script>
   import { simpanbokep } from '../myfunction/index.js';
-  import {directlink_url} from '../base/config.js'
-
+  import {gotoplayer} from '../lib'
 
 	 let loading = true; 
 	export let data;  
@@ -19,17 +18,6 @@ function formatDate(dateString) {
     }
 
 
-function gotoplayer(file) {
-  let opsi = [1, 2, 3];
-  let randomIndex = Math.floor(Math.random() * opsi.length); 
-  let selectedOption = opsi[randomIndex]; 
-  
-  if (selectedOption === 2) {
-    window.open(directlink_url,"_blank")
-  } else {
-    window.location.href = "/player/" + file.file_code
-  }
-}
 
 
 </script>
