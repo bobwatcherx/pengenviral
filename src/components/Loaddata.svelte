@@ -1,7 +1,9 @@
 
 <script>
   import { simpanbokep } from '../myfunction/index.js';
-  
+  import {directlink_url} from '../base/config.js'
+
+
 	 let loading = true; 
 	export let data;  
   $: {
@@ -15,6 +17,19 @@ function formatDate(dateString) {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', options);
     }
+
+
+function gotoplayer(file) {
+  let opsi = [1, 2, 3];
+  let randomIndex = Math.floor(Math.random() * opsi.length); 
+  let selectedOption = opsi[randomIndex]; 
+  
+  if (selectedOption === 2) {
+    window.open(directlink_url,"_blank")
+  } else {
+    window.location.href = "/player/" + file.file_code
+  }
+}
 
 
 </script>
@@ -47,10 +62,10 @@ function formatDate(dateString) {
               class="btn waves waves-effect blue"
               on:click={() => simpanbokep(file)}
             >Simpan</button>
-            <a
+            <button
+            on:click={()=>gotoplayer(file)}
               class="btn waves waves-effect pink"
-              href={"/player/" + file.file_code}
-            >Nonton</a>
+            >Nonton</button>
           </div>
         </div>
       </div>

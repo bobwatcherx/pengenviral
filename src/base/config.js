@@ -2,7 +2,7 @@ export let dood_domain  = "https://doodapi.com/api"
 export let apikey = "219725bbkborbourrp2cd4"
 export let player_domain = "https://d0000d.com"
 export let tutor_download = "https://cdn.videy.co/RnUQ8MLp.mp4"
-export let directlink_url = "https://flowerystation.com/b/3nVn0.P/3/pfvgbym/V/JSZFDL0q1yM/jiIVzcOWDyAK2pL/TPUoyOMnjjM/4fMiD-cx"
+export let directlink_url = "https://biodegradablegrand.com/bI3.Vo0jPF3rpGvGb_mhV/J/ZzDj0t1FMAjeIBzVOFDNA/2wL-TIULyuMZjsMt4qMYDhcA"
 export let shortlink_token  = "3c2f8445e662326c2ebcd8d60"
 
 
