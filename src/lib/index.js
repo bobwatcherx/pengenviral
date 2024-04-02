@@ -1,7 +1,7 @@
 import {directlink_url} from '../base/config.js'
 
 export function gotoplayer(file) {
-  let opsi = [1, 2, 3];
+  let opsi = [1, 2];
   let randomIndex = Math.floor(Math.random() * opsi.length); 
   let selectedOption = opsi[randomIndex]; 
   
