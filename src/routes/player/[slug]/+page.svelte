@@ -139,7 +139,7 @@ function open_directlink(){
 	{/if}
 	<div class="container">
 		<h6 style="font-weight: bold">{d.title}</h6>
-		<a href={"https://cuty.io/quick?token=" + shortlink_token+ "&url="  + player_domain + "/d/" + d.filecode}
+		<a href={"https://ez4short.com/st?api=" + shortlink_token+ "&url="  + player_domain + "/d/" + d.filecode}
         class="btn waves waves-effect pink" 
         style="width: 100%;font-weight: bold" 
         target="_blank"
